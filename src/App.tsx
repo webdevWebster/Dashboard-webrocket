@@ -1,7 +1,7 @@
-import Contributor from "./pages/contributor";
+import Header from "./components/header";
 
 export default function App() {
   return(
-    <Contributor />
+    <Header />
   )
 };

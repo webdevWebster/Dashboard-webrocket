@@ -14,6 +14,7 @@ import {
 import { Home, Inbox, Settings, Wallet, Book } from "lucide-react"
 
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
+import { Card } from "@/components/ui/card";
 
 
 // Menu items.
@@ -78,11 +79,15 @@ export default function Contributor() {
                     </SidebarGroup>
                 </SidebarContent>
             </Sidebar>
-            <main>
+            {/* //continuar a criar o main  */}
+            {/* <main>
                 <header>
-                    <h1>content</h1>
+                    <Card>
+                        <span>Arquivos</span>
+                        <img src={Inbox} alt="" />
+                    </Card>
                 </header>
-            </main>
+            </main> */}
         </SidebarProvider>
     </div>
     );
