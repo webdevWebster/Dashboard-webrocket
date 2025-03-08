@@ -1,3 +1,4 @@
+import FileGallery from "./components/fileGallery";
 import Header from "./components/header";
 
 export default function App() {
@@ -5,6 +6,7 @@ export default function App() {
     <>
       <Header />
       <main>
+        <FileGallery />
       </main>
     </>
   )
