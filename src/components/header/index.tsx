@@ -7,6 +7,7 @@ import { AuroraText } from "../magicui/aurora-text";
 
 import './style.css'
 import Subheader from "./subHeader";
+import SearchSection from "./searchSection";
 
 export default function Header() {
   return (
@@ -42,6 +43,7 @@ export default function Header() {
         </div>
         </header>
         <Subheader />
+        <SearchSection />
     </>
   );
 }
