@@ -25,20 +25,20 @@ export function LoginForm() {
             </CardHeader>
             <CardContent>
                 <form>
-                <div className="grid w-full items-center gap-4">
-                    <div className="flex flex-col space-y-1.5">
-                    <Label htmlFor="email">Email</Label>
-                    <Input id="email" type="email" placeholder="Entre com seu e-mail" />
+                    <div className="grid w-full items-center gap-4">
+                        <div className="flex flex-col space-y-1.5">
+                            <Label htmlFor="email">Email</Label>
+                            <Input id="email" type="email" placeholder="Entre com seu e-mail" />
+                        </div>
+                        <div className="flex flex-col space-y-1.5">
+                            <Label htmlFor="password">Senha</Label>
+                            <Input
+                                id="password"
+                                type="password"
+                                placeholder="Entre com sua senha"
+                            />
+                        </div>
                     </div>
-                    <div className="flex flex-col space-y-1.5">
-                    <Label htmlFor="password">Senha</Label>
-                    <Input
-                        id="password"
-                        type="password"
-                        placeholder="Entre com sua senha"
-                    />
-                    </div>
-                </div>
                 </form>
             </CardContent>
             <CardFooter className="flex justify-between">
