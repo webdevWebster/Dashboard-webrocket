@@ -1,3 +1,4 @@
+import Footer from "@/components/footer";
 import Header from "@/components/header";
 import { Button } from "@/components/ui/button";
 import {
@@ -73,6 +74,7 @@ export function RegisterForm() {
                 </CardFooter>
             </Card>
         </div>
+        <Footer />
     </>
   );
 }

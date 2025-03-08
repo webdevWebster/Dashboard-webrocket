@@ -13,6 +13,7 @@ import { Label } from "@/components/ui/label";
 import './style.css'
 import Header from "@/components/header";
 import { Link } from "react-router-dom";
+import Footer from "@/components/footer";
 
 export function LoginForm() {
   return (
@@ -52,6 +53,7 @@ export function LoginForm() {
                 </CardFooter>
             </Card>
         </div>
+        <Footer />
     </>
   );
 }
