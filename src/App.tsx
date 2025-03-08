@@ -1,9 +1,7 @@
-import { LoginForm } from "./pages/login";
-import { RegisterForm } from "./pages/register";
+import Contributor from "./pages/contributor";
 
-export default function App() { 
+export default function App() {
   return(
-    // <LoginForm />
-    <RegisterForm />
+    <Contributor />
   )
 };
