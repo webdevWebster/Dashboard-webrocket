@@ -1,12 +1,7 @@
-import './App.css'
+import { LoginForm } from "./pages/login";
 
-function App() {
-
-  return (
-    <>
-      <h1>Dashboard</h1>
-    </>
+export default function App() { 
+  return(
+    <LoginForm />
   )
-}
-
-export default App
+};
