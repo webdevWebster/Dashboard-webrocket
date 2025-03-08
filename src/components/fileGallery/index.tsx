@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Card, CardHeader } from "@/components/ui/card";
+import { Card, CardContent } from "@/components/ui/card";
 import { Pagination, PaginationContent, PaginationItem, PaginationLink } from "@/components/ui/pagination";
 
 // 🔹 Gerando arquivos simulados
@@ -30,14 +30,12 @@ export default function FileGallery() {
         {/* Grid dinâmico */}
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4">
           {currentFiles.map((file) => (
-            <Card key={file.id} className="overflow-hidden shadow-md">
-              <CardHeader className="p-0">
+            <Card key={file.id} className="overflow-hidden shadow-md cursor-pointer">
                 <img 
                   src={file.image} 
                   alt={`Arquivo ${file.id}`} 
                   className="w-full h-auto object-cover rounded-lg"
                 />
-              </CardHeader>
             </Card>
           ))}
         </div>

@@ -8,6 +8,7 @@ import { AuroraText } from "../magicui/aurora-text";
 import './style.css'
 import Subheader from "./subHeader";
 import SearchSection from "./searchSection";
+import { Link } from "react-router-dom";
 
 export default function Header() {
   return (
@@ -15,15 +16,21 @@ export default function Header() {
         <header className="w-full bg-white shadow-md">
         <div className="container mx-auto flex items-center justify-between p-4">
             {/* Logo */}
-            <div className="text-xl font-bold">MeuSite</div>
+            <Link to='/'>
+                <div className="text-xl font-bold">MeuSite</div>
+            </Link>
 
             {/* Botão de Ação */}
             <div className="actionsHeader">
                 <h1 className="text-sm font-bold tracking-tighter md:text-5xl lg:text-7xl textAurora">
                     Assine o <AuroraText className="textAurora">Premium</AuroraText>
                 </h1>
-                <Button className="hidden md:block" variant="secondary">Cadastre-se</Button>
-                <Button className="hidden md:block">Entrar</Button>
+                <Link to='/Registrar'>
+                    <Button className="hidden md:block" variant="secondary">Cadastre-se</Button>
+                </Link>
+                <Link to='/Login'>
+                    <Button className="hidden md:block">Entrar</Button>
+                </Link>
             </div>
 
             {/* Menu Mobile */}
@@ -43,7 +50,6 @@ export default function Header() {
         </div>
         </header>
         <Subheader />
-        <SearchSection />
     </>
   );
 }

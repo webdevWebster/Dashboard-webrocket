@@ -9,10 +9,10 @@ import {
 } from "@/components/ui/dropdown-menu";
 
 const categories = [
-  { name: "Design", subcategories: ["UI/UX", "Gráficos", "Logotipos"] },
-  { name: "Marketing", subcategories: ["SEO", "Anúncios", "Redes Sociais"] },
-  { name: "Desenvolvimento", subcategories: ["Web", "Mobile", "Software"] },
-  { name: "Fotografia", subcategories: [] }, // Sem subcategorias
+  { name: "PNG", subcategories: ["UI/UX", "Gráficos", "Logotipos"] },
+  { name: "PSD", subcategories: ["SEO", "Anúncios", "Redes Sociais"] },
+  { name: "Mockups", subcategories: ["Web", "Mobile", "Software"] },
+  { name: "Fotos", subcategories: [] }, // Sem subcategorias
 ];
 
 export default function Subheader() {
@@ -23,7 +23,7 @@ export default function Subheader() {
           category.subcategories.length > 0 ? (
             <DropdownMenu key={index}>
               <DropdownMenuTrigger asChild>
-                <Button variant="ghost" className="text-gray-700 hover:text-black">
+                <Button variant="ghost" className="text-gray-700 hover:text-black cursor-pointer">
                   {category.name}
                 </Button>
               </DropdownMenuTrigger>

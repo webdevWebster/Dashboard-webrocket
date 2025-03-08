@@ -12,6 +12,7 @@ import { Label } from "@/components/ui/label";
 
 import './style.css'
 import Header from "@/components/header";
+import { Link } from "react-router-dom";
 
 export function LoginForm() {
   return (
@@ -44,7 +45,9 @@ export function LoginForm() {
                     </form>
                 </CardContent>
                 <CardFooter className="flex justify-between">
-                    <Button variant="outline">Register</Button>
+                    <Link to="/">
+                        <Button variant="outline">Cancelar</Button>
+                    </Link>
                     <Button>Login</Button>
                 </CardFooter>
             </Card>
