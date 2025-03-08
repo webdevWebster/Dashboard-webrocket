@@ -8,7 +8,7 @@ import { Pagination, PaginationContent, PaginationItem, PaginationLink } from "@
 const generateFiles = (count: number) => {
   return Array.from({ length: count }, (_, i) => ({
     id: i + 1,
-    image: `https://img.cdndsgni.com/preview/10099302.jpg`, // Imagem dinâmica
+    image: `https://img.cdndsgni.com/preview/12567118.jpg`, // Imagem dinâmica
   }));
 };
 
@@ -31,11 +31,11 @@ export default function FileGallery() {
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4">
           {currentFiles.map((file) => (
             <Card key={file.id} className="shadow-md cursor-pointer">
-                <img 
-                  src={file.image} 
-                  alt={`Arquivo ${file.id}`} 
-                  className="w-full h-auto rounded-lg"
-                />
+              <img 
+                src={file.image} 
+                alt={`Arquivo ${file.id}`} 
+                className="w-full h-64 object-cover rounded-lg" 
+              />
             </Card>
           ))}
         </div>
