@@ -9,7 +9,7 @@ import {
 } from "@/components/ui/dropdown-menu";
 
 const categories = [
-  { name: "PNG", subcategories: ["UI/UX", "Gráficos", "Logotipos"] },
+  { name: "PNG", subcategories: ["Pessoas", "Comidas", "Logotipos"] },
   { name: "PSD", subcategories: ["SEO", "Anúncios", "Redes Sociais"] },
   { name: "Mockups", subcategories: ["Web", "Mobile", "Software"] },
   { name: "Fotos", subcategories: [] }, // Sem subcategorias
