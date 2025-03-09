@@ -1,5 +1,6 @@
 "use client";
 
+import { AuroraText } from "@/components/magicui/aurora-text";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Search } from "lucide-react";
@@ -9,8 +10,8 @@ export default function SearchSection() {
     <section className="w-full bg-gray-100 py-30">
       <div className="container mx-auto text-center px-4">
         {/* Título e Subtítulo */}
-        <h1 className="text-3xl md:text-4xl font-bold text-gray-800">
-          Encontre os melhores arquivos criativos
+        <h1 className="text-5xl font-bold tracking-tighter md:text-5xl lg:text-7xl">
+          Pesquise aqui seus <AuroraText>Arquivos</AuroraText>
         </h1>
         <p className="text-gray-600 mt-2 text-lg md:text-xl">
           Busque por templates, ilustrações, fontes e muito mais

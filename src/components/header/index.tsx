@@ -25,7 +25,7 @@ export default function Header() {
 
             {/* Botão de Ação */}
             <div className="actionsHeader">
-                <h1 className="text-sm font-bold tracking-tighter md:text-5xl lg:text-7xl textAurora">
+                <h1 className="text-3xl font-bold tracking-tighter md:text-5xl lg:text-7xl textAurora">
                     <Link to='/plans'>
                         Assine o <AuroraText className="textAurora">Premium</AuroraText>
                     </Link>
@@ -47,17 +47,17 @@ export default function Header() {
 
             {/* Menu Mobile */}
             <Sheet>
-            <SheetTrigger asChild>
-                <Button variant="ghost" size="icon" className="md:hidden">
-                <Menu className="w-6 h-6" />
-                </Button>
-            </SheetTrigger>
-            <SheetContent side="left" className="flex flex-col gap-4 p-6">
-                <a href="#" className="text-lg font-semibold text-gray-700 hover:text-black">Home</a>
-                <a href="#" className="text-lg font-semibold text-gray-700 hover:text-black">Sobre</a>
-                <a href="#" className="text-lg font-semibold text-gray-700 hover:text-black">Contato</a>
-                <Button className="mt-4">Entrar</Button>
-            </SheetContent>
+                <SheetTrigger asChild>
+                    <Button variant="ghost" size="icon" className="md:hidden">
+                    <Menu className="w-6 h-6" />
+                    </Button>
+                </SheetTrigger>
+                <SheetContent side="left" className="flex flex-col gap-4 p-6">
+                    <a href="#" className="text-lg font-semibold text-gray-700 hover:text-black">Home</a>
+                    <a href="#" className="text-lg font-semibold text-gray-700 hover:text-black">Sobre</a>
+                    <a href="#" className="text-lg font-semibold text-gray-700 hover:text-black">Contato</a>
+                    <Button className="mt-4">Entrar</Button>
+                </SheetContent>
             </Sheet>
         </div>
         </header>
