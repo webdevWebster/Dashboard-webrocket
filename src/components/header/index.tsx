@@ -8,8 +8,12 @@ import { AuroraText } from "../magicui/aurora-text";
 import './style.css'
 import Subheader from "./subHeader";
 import { Link } from "react-router-dom";
+import { useState } from "react";
+import ProfileDropdown from "../profileDropDown";
 
 export default function Header() {
+    const [isLoggedIn, setIsLoggedIn] = useState(true);
+
   return (
     <>
         <header className="w-full bg-white shadow-md">
@@ -26,12 +30,19 @@ export default function Header() {
                         Assine o <AuroraText className="textAurora">Premium</AuroraText>
                     </Link>
                 </h1>
-                <Link to='/Registrar'>
-                    <Button className="hidden md:block" variant="secondary">Cadastre-se</Button>
-                </Link>
-                <Link to='/Login'>
-                    <Button className="hidden md:block">Entrar</Button>
-                </Link>
+                {isLoggedIn ? (
+                    <ProfileDropdown />
+                ) : (
+                    <div className="flex gap-2">
+                        <Link to="/Registrar">
+                            <Button className="hidden md:block" variant="secondary">Cadastre-se</Button>
+                        </Link>
+                        <Link to="/Login">
+                            <Button className="hidden md:block">Entrar</Button>
+                        </Link>
+                    </div>
+                )}
+
             </div>
 
             {/* Menu Mobile */}
