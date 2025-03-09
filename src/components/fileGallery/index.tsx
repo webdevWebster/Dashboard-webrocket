@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import { Card } from "@/components/ui/card";
 import { Pagination, PaginationContent, PaginationItem, PaginationLink } from "@/components/ui/pagination";
 
 // 🔹 Gerando arquivos simulados
@@ -13,7 +12,7 @@ const generateFiles = (count: number) => {
 };
 
 const files = generateFiles(100); // 🔹 Agora temos 100 arquivos de exemplo
-const itemsPerPage = 30; // 🔹 Exibir 30 arquivos por página
+const itemsPerPage = 20; // 🔹 Exibir 30 arquivos por página
 
 export default function FileGallery() {
   const [currentPage, setCurrentPage] = useState(1);
@@ -30,13 +29,13 @@ export default function FileGallery() {
         {/* Grid dinâmico */}
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4">
           {currentFiles.map((file) => (
-            <Card key={file.id} className="shadow-md cursor-pointer">
+            <div key={file.id} className="w-full shadow-md cursor-pointer h-full rounded-lg">
               <img 
                 src={file.image} 
                 alt={`Arquivo ${file.id}`} 
-                className="w-full h-64 object-cover rounded-lg"
+                className="w-full rounded-lg shadow-md"
               />
-            </Card>
+            </div>
           ))}
         </div>
 
