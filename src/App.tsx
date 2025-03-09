@@ -7,6 +7,7 @@ import { LoginForm } from './pages/login';
 import { RegisterForm } from './pages/register';
 import Plans from './pages/planos';
 import CreatorPage from './pages/creatorPage';
+import FilePreview from './pages/filePreview';
 
 export default function App() {
   return(
@@ -17,6 +18,7 @@ export default function App() {
         <Route path="/Registrar" element={<RegisterForm />} />
         <Route path="/plans" element={<Plans />} />
         <Route path="/creatorPage" element={<CreatorPage />} />
+        <Route path="/filePreview" element={<FilePreview />} />
       </Routes>
     </>
   )
