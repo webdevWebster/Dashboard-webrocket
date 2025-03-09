@@ -6,6 +6,8 @@ import { Carousel, CarouselItem } from "@/components/ui/carousel";
 import { toast } from "react-hot-toast";
 import { Heart, Bookmark, Share2 } from "lucide-react"; // Ícones
 import Header from "@/components/header";
+import Footer from "@/components/footer";
+import FileGallery from "@/components/fileGallery";
 
 // 🔹 Simulação de arquivo
 const file = {
@@ -67,7 +69,7 @@ export default function FilePreview() {
         <div className="container mx-auto px-4 py-10 grid grid-cols-1 md:grid-cols-2 gap-8">
         {/* 🔹 Imagem do Arquivo / Carrossel */}
             <div className="flex flex-col items-center">
-                <Carousel className="w-full max-w-md">
+                <Carousel className="w-full">
                     <CarouselItem className="w-full">
                         <img src={file.image} className="w-full rounded-lg shadow-md" />
                     </CarouselItem>
@@ -91,16 +93,16 @@ export default function FilePreview() {
 
                 {/* 🔹 Informações do Arquivo */}
                 <Card className="p-4 mt-6 w-full bg-gray-100 border border-gray-300 text-sm">
-                <p><strong>📂 Formato do arquivo:</strong> {file.format}</p>
-                <p><strong>📦 Extensão de download:</strong> {file.extension}</p>
-                <p><strong>💾 Tamanho:</strong> {file.size}</p>
-                <p><strong>🆔 Número de identificação:</strong> {file.idNumber}</p>
-                <p><strong>🔖 Licença:</strong> {file.isPremium ? "Premium" : "Gratuito"}</p>
-                <p className="mt-2 text-gray-600">
-                    Este é um recurso oferecido em formato {file.format}. Este arquivo, nativo do Adobe Photoshop, 
-                    é ideal para edição avançada de imagens. Ele permite personalizar textos, alterar cores e ajustar 
-                    elementos gráficos conforme a necessidade do seu projeto.
-                </p>
+                    <p><strong>Formato do arquivo:</strong> {file.format}</p>
+                    <p><strong>Extensão de download:</strong> {file.extension}</p>
+                    <p><strong>Tamanho:</strong> {file.size}</p>
+                    <p><strong>Número de identificação:</strong> {file.idNumber}</p>
+                    <p><strong>Licença:</strong> {file.isPremium ? "Premium" : "Gratuito"}</p>
+                    <p className="mt-2 text-gray-600">
+                        Este é um recurso oferecido em formato {file.format}. Este arquivo, nativo do Adobe Photoshop, 
+                        é ideal para edição avançada de imagens. Ele permite personalizar textos, alterar cores e ajustar 
+                        elementos gráficos conforme a necessidade do seu projeto.
+                    </p>
                 </Card>
             </div>
 
@@ -135,7 +137,7 @@ export default function FilePreview() {
                     disabled={file.isPremium}
                     onClick={handleDownload}
                 >
-                📥 Download ({file.size})
+                    Download ({file.size})
                 </Button>
 
                 {/* 🔹 Criador */}
@@ -144,9 +146,11 @@ export default function FilePreview() {
                     <AvatarImage src={file.creator.profilePic} alt={file.creator.name} />
                     <AvatarFallback>{file.creator.name.charAt(0)}</AvatarFallback>
                 </Avatar>
-                <div>
-                    <p className="font-semibold text-lg">{file.creator.name}</p>
-                    <p className="text-gray-500">{file.creator.files.toLocaleString()} arquivos</p>
+                <div className="flex gap-6">
+                    <div>
+                        <p className="font-semibold text-lg">{file.creator.name}</p>
+                        <p className="text-gray-500">{file.creator.files.toLocaleString()} arquivos</p>
+                    </div>
                     <Button
                     onClick={handleFollow}
                     className={`mt-2 px-4 py-2 text-sm ${
@@ -159,6 +163,8 @@ export default function FilePreview() {
                 </div>
             </div>
         </div>
+        <FileGallery />
+        <Footer />
     </>
   );
 }
