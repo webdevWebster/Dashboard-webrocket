@@ -24,7 +24,7 @@ const file = {
   idNumber: "#12750179",
   format: "PSD",
   extension: "zip",
-  image: "https://img.cdndsgni.com/preview/12750179.jpg",
+  image: "https://img.cdndsgni.com/preview/10895863.jpg",
   creator: {
     name: "Robert",
     profilePic: "https://i.pravatar.cc/150?img=10",
