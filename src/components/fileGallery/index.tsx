@@ -34,7 +34,7 @@ export default function FileGallery() {
               <img 
                 src={file.image} 
                 alt={`Arquivo ${file.id}`} 
-                className="w-full h-64 object-cover rounded-lg" 
+                className="w-full h-64 object-cover rounded-lg"
               />
             </Card>
           ))}
