@@ -35,10 +35,16 @@ const plans = [
 const Plans = () => {
   return (
     <>
-        <Header />
         <section className="py-30 bg-gray-100">
         <div className="container mx-auto px-4">
-            <h2 className="text-3xl font-semibold text-center mb-8">Escolha o Melhor Plano para Você</h2>
+            <div className="flex flex-col mb-10 items-center">
+              <h2 className="text-3xl font-semibold text-center mb-2">Escolha o Melhor Plano para Você</h2>
+              <span className="text-gray-600 text-center w-150">
+                Conte com uma ampla variedade de recursos gráficos de alta qualidade.
+                Você pode navegar pelo nosso acervo e baixar o que precisar
+                para usar em seus projetos criativos.
+              </span>
+            </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {plans.map((plan, index) => (
                 <div
@@ -72,7 +78,6 @@ const Plans = () => {
             </div>
         </div>
         </section>
-        <Footer />
     </>
   );
 };

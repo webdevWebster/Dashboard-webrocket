@@ -162,6 +162,6 @@ export default function FilePreview() {
                 </div>
             </div>
         </div>
-    </>
+      </>
   );
 }
