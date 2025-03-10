@@ -9,9 +9,9 @@ import {
 } from "@/components/ui/dropdown-menu";
 
 const categories = [
-  { name: "PNG", subcategories: ["Pessoas", "Comidas", "Logotipos"] },
-  { name: "PSD", subcategories: ["SEO", "Anúncios", "Redes Sociais"] },
-  { name: "Mockups", subcategories: ["Web", "Mobile", "Software"] },
+  { name: "PNG", subcategories: ["Pessoas", "Comidas", "Animais"] },
+  { name: "PSD", subcategories: ["Datas", "Social Media", "Banners"] },
+  { name: "Mockups", subcategories: ["Computador", "Relógio", "Iphones"] },
   { name: "Fotos", subcategories: [] }, // Sem subcategorias
 ];
 
