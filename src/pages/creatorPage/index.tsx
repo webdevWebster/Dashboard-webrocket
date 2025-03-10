@@ -3,7 +3,7 @@ import { Card } from "@/components/ui/card";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import { toast } from "react-hot-toast";
-import { Share2 } from "lucide-react";
+import { Clock, DollarSign, Share2, Users, Archive } from "lucide-react";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
 import FileGallery from "@/components/fileGallery";
@@ -22,6 +22,14 @@ const creator = {
     curtidas: 7800,
   },
 };
+
+const iconMap = {
+  Arquivos: DollarSign,
+  Downloads: Users,
+  Seguidores: Clock,
+  Curtidas: Archive
+};
+
 
 const CreatorPage = () => {
   const [isFollowing, setIsFollowing] = useState(false);
@@ -92,12 +100,19 @@ const CreatorPage = () => {
 
           {/* 🔹 Estatísticas */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-6">
-            {Object.entries(creator.stats).map(([key, value]) => (
-              <Card key={key} className="p-4 flex flex-col items-center text-center shadow-md">
+          {Object.entries(creator.stats).map(([key, value]) => {
+            // Garantindo que key seja uma chave válida do iconMap
+            const StatIcon = iconMap[key as keyof typeof iconMap] || Archive; 
+            // aqui ele só está retornando o Archive, preciso verificar essa interacao: iconMap[key as keyof typeof iconMap]
+
+            return (
+              <Card key={key} className="p-2 flex flex-col items-center shadow-md rounded-xl py-5 gap-0.5">
+                <StatIcon className="w-8 h-8 text-primary" />
                 <span className="text-2xl font-bold">{value.toLocaleString()}</span>
                 <span className="text-gray-500 capitalize">{key}</span>
               </Card>
-            ))}
+            );
+          })}
           </div>
         </div>
         <FileGallery />
