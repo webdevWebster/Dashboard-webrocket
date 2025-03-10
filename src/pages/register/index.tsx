@@ -19,7 +19,6 @@ import { Link } from "react-router-dom";
 export function RegisterForm() {
   return (
     <>
-        <Header />
         <div className="wrapper">
             <Card className="relative w-[350px] overflow-hidden">
                 <CardHeader>
@@ -74,7 +73,6 @@ export function RegisterForm() {
                 </CardFooter>
             </Card>
         </div>
-        <Footer />
     </>
   );
 }

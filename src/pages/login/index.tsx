@@ -20,7 +20,6 @@ import imgAstronauta from '../../assets/astronauta.webp'
 export function LoginForm() {
   return (
     <>
-        <Header />
         <div className="wrapper flex justify-center ">
             <div>
                 <img src={imgAstronauta} alt="Imagem de astronauta" width={350} height={350}/>
@@ -66,7 +65,6 @@ export function LoginForm() {
                 </CardFooter>
             </Card>
         </div>
-        <Footer />
     </>
   );
 }

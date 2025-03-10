@@ -65,7 +65,6 @@ export default function FilePreview() {
 
   return (
     <>
-        <Header />
         <div className="container mx-auto px-4 py-10 grid grid-cols-1 md:grid-cols-2 gap-8">
         {/* 🔹 Imagem do Arquivo / Carrossel */}
             <div className="flex flex-col items-center">
@@ -163,8 +162,6 @@ export default function FilePreview() {
                 </div>
             </div>
         </div>
-        <FileGallery />
-        <Footer />
     </>
   );
 }

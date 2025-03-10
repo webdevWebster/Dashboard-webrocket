@@ -12,7 +12,7 @@ import { useState } from "react";
 import ProfileDropdown from "../profileDropDown";
 
 export default function Header() {
-    const [isLoggedIn, setIsLoggedIn] = useState(true);
+    const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   return (
     <>
