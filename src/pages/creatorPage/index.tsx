@@ -24,10 +24,10 @@ const creator = {
 };
 
 const iconMap = {
-  Arquivos: DollarSign,
-  Downloads: Users,
-  Seguidores: Clock,
-  Curtidas: Archive
+  DollarSign: DollarSign,
+  Users: Users,
+  Clock: Clock,
+  Archive: Archive
 };
 
 
@@ -103,12 +103,13 @@ const CreatorPage = () => {
           {Object.entries(creator.stats).map(([key, value]) => {
             // Garantindo que key seja uma chave válida do iconMap
             const StatIcon = iconMap[key as keyof typeof iconMap] || Archive; 
+            console.log(StatIcon)
             // aqui ele só está retornando o Archive, preciso verificar essa interacao: iconMap[key as keyof typeof iconMap]
 
             return (
-              <Card key={key} className="p-2 flex flex-col items-center shadow-md rounded-xl py-5 gap-0.5">
+              <Card key={key} className="p-2 flex flex-col items-center shadow-md rounded-xl py-5 gap-0">
                 <StatIcon className="w-8 h-8 text-primary" />
-                <span className="text-2xl font-bold">{value.toLocaleString()}</span>
+                <span className="text-1xl font-bold">{value.toLocaleString()}</span>
                 <span className="text-gray-500 capitalize">{key}</span>
               </Card>
             );
