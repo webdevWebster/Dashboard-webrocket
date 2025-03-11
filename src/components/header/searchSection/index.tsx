@@ -10,11 +10,11 @@ export default function SearchSection() {
     <section className="w-full bg-gray-100 py-30">
       <div className="container mx-auto text-center px-4">
         {/* Título e Subtítulo */}
-        <h1 className="text-5xl font-bold tracking-tighter md:text-5xl lg:text-7xl">
+        <h1 className="text-2xl font-bold tracking-tighter md:text-3xl lg:text-5xl">
           Pesquise aqui seus <AuroraText>Arquivos</AuroraText>
         </h1>
         <p className="text-gray-600 mt-2 text-lg md:text-xl">
-          Busque por templates, ilustrações, fontes e muito mais
+          Busque por templates, ilustrações, fontes e muito mais.
         </p>
 
         {/* Barra de Busca */}

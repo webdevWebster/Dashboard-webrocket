@@ -13,7 +13,7 @@ const generateFiles = (count: number) => {
 };
 
 const files = generateFiles(100); // 🔹 Agora temos 100 arquivos de exemplo
-const itemsPerPage = 30; // 🔹 Exibir 30 arquivos por página
+const itemsPerPage = 91; // 🔹 Exibir 30 arquivos por página
 
 export default function FileGallery() {
   const [currentPage, setCurrentPage] = useState(1);

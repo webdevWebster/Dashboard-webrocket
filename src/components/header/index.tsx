@@ -26,7 +26,7 @@ export default function Header() {
             {/* Botão de Ação */}
             <div className="actionsHeader">
                 <h1 className="text-3xl font-bold tracking-tighter md:text-5xl lg:text-7xl textAurora">
-                    <Link to='/plans'>
+                    <Link to='/planos'>
                         Assine o <AuroraText className="textAurora">Premium</AuroraText>
                     </Link>
                 </h1>
