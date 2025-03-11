@@ -27,7 +27,7 @@ export function RegisterForm() {
                     <form>
                         <div className="grid w-full items-center gap-4">
                             <div className="flex flex-col space-y-1.5">
-                                <Label htmlFor="nome">Nome</Label>
+                                <Label htmlFor="nome">Nome completo</Label>
                                 <Input 
                                     id="nome" 
                                     type="text" 
@@ -35,19 +35,19 @@ export function RegisterForm() {
                                 />
                             </div>
                             <div className="flex flex-col space-y-1.5">
+                                <Label htmlFor="email">Telefone</Label>
+                                <Input 
+                                    id="telefone" 
+                                    type="tel" 
+                                    placeholder="(00) 00000-0000" 
+                                />
+                            </div>
+                            <div className="flex flex-col space-y-1.5">
                                 <Label htmlFor="email">Email</Label>
                                 <Input 
                                     id="email" 
                                     type="email" 
-                                    placeholder="Entre com seu e-mail" 
-                                />
-                            </div>
-                            <div className="flex flex-col space-y-1.5">
-                                <Label htmlFor="email">Repetir Email</Label>
-                                <Input 
-                                    id="email" 
-                                    type="email" 
-                                    placeholder="Repetir seu e-mail" 
+                                    placeholder="Digite seu e-mail" 
                                 />
                             </div>
                             <div className="flex flex-col space-y-1.5">
@@ -55,7 +55,7 @@ export function RegisterForm() {
                                 <Input
                                     id="password"
                                     type="password"
-                                    placeholder="Entre com sua senha"
+                                    placeholder="Escolha uma senha"
                                 />
                             </div>
                         </div>
