@@ -4,16 +4,26 @@ import { useState } from "react";
 import { Pagination, PaginationContent, PaginationItem, PaginationLink } from "@/components/ui/pagination";
 import SearchSection from "../header/searchSection";
 
-// 🔹 Gerando arquivos simulados
-const generateFiles = (count: number) => {
-  return Array.from({ length: count }, (_, i) => ({
-    id: i + 1,
-    image: `https://img.cdndsgni.com/preview/12567118.jpg`, // Imagem dinâmica
-  }));
-};
+import imgTeste from '../../assets/Abril-Azul.png'
+import imgTeste2 from '../../assets/abril azul2.png'
+import imgTeste3 from '../../assets/banner-abril-azul.png'
 
-const files = generateFiles(100); // 🔹 Agora temos 100 arquivos de exemplo
+// 🔹 Gerando arquivos simulados
+// const generateFiles = (count: number) => {
+//   return Array.from({ length: count }, (_, i) => ({
+//     id: i + 1,
+//     image: imgTeste, // Imagem dinâmica
+//   }));
+// };
+
+// const files = generateFiles(100); // 🔹 Agora temos 100 arquivos de exemplo
 const itemsPerPage = 91; // 🔹 Exibir 30 arquivos por página
+
+const files = [
+  {image: imgTeste,},
+  {image: imgTeste2,},
+  {image: imgTeste3,}
+]
 
 export default function FileGallery() {
   const [currentPage, setCurrentPage] = useState(1);
@@ -32,10 +42,9 @@ export default function FileGallery() {
           {/* Grid dinâmico */}
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4">
             {currentFiles.map((file) => (
-              <div key={file.id} className="w-full shadow-md cursor-pointer h-full rounded-lg">
+              <div className="w-full shadow-md cursor-pointer rounded-lg">
                 <img 
                   src={file.image} 
-                  alt={`Arquivo ${file.id}`} 
                   className="w-full rounded-lg shadow-md"
                 />
               </div>
