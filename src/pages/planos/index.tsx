@@ -19,7 +19,7 @@ const plans = [
       "15 Download por dia",
       "Suporte ao cliente",
     ],
-    isFeatured: false,
+    isFeatured: true,
   },
   {
     name: "Plano Avançado",
@@ -28,7 +28,7 @@ const plans = [
       "25 Download por dia",
       "Consultoria personalizada",
     ],
-    isFeatured: true, // Destaque para o plano avançado
+    isFeatured: false, // Destaque para o plano avançado
   },
 ];
 
@@ -38,7 +38,11 @@ const Plans = () => {
         <section className="py-30 bg-gray-100">
         <div className="container mx-auto px-4">
             <div className="flex flex-col mb-10 items-center">
-              <h2 className="text-3xl font-semibold text-center mb-2">Escolha o Melhor Plano para Você</h2>
+              <h2 className="text-3xl font-semibold text-center mb-2">
+                Escolha o 
+                <p className="bg-gradient-to-r from-blue-300 to-blue-900 bg-clip-text text-transparent text-4xl font-bold">Melhor Plano</p>
+                para Você
+              </h2>
               <span className="text-gray-600 text-center w-150">
                 Conte com uma ampla variedade de recursos gráficos de alta qualidade.
                 Você pode navegar pelo nosso acervo e baixar o que precisar

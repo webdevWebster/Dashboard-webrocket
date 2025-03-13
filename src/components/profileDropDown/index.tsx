@@ -42,7 +42,7 @@ export default function ProfileDropdown() {
             <Heart size={16} /> Curtidas
           </DropdownMenuItem>
           <DropdownMenuItem className="flex items-center gap-2 cursor-pointer hover:bg-gray-100 p-2">
-            <Download size={16} /> Downloads
+            <Download size={16} /> Downloads <span className="bg-gray-200 p-1.25 rounded-lg">0/3</span>
           </DropdownMenuItem>
           <DropdownMenuItem className="flex items-center gap-2 cursor-pointer hover:bg-gray-100 p-2">
             <DoorOpen size={16} /> Sair

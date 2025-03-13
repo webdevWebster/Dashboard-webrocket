@@ -21,6 +21,7 @@ export default function App() {
           <Route path='/planos' element={<Plans />} />
           <Route path='/filePreview' element={<FilePreview />} />
         </Routes>
+        <Plans />
       <Footer />
     </>
   )

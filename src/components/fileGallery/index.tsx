@@ -17,12 +17,12 @@ import imgTeste3 from '../../assets/banner-abril-azul.png'
 // };
 
 // const files = generateFiles(100); // 🔹 Agora temos 100 arquivos de exemplo
-const itemsPerPage = 91; // 🔹 Exibir 30 arquivos por página
+const itemsPerPage = 10; // 🔹 Exibir 30 arquivos por página
 
 const files = [
   {image: imgTeste, proporcao: '3/4' },
   {image: imgTeste2, proporcao: '3/4'},
-  {image: imgTeste3, proporcao: '9/4'}
+  {image: imgTeste3, proporcao: '9/4'},
 ]
 
 export default function FileGallery() {
