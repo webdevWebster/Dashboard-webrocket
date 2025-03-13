@@ -20,9 +20,9 @@ import imgTeste3 from '../../assets/banner-abril-azul.png'
 const itemsPerPage = 91; // 🔹 Exibir 30 arquivos por página
 
 const files = [
-  {image: imgTeste,},
-  {image: imgTeste2,},
-  {image: imgTeste3,}
+  {image: imgTeste, proporcao: '3/4' },
+  {image: imgTeste2, proporcao: '3/4'},
+  {image: imgTeste3, proporcao: '9/4'}
 ]
 
 export default function FileGallery() {
@@ -40,12 +40,12 @@ export default function FileGallery() {
       <section className="w-full py-10">
         <div className="container mx-auto px-4">
           {/* Grid dinâmico */}
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4">
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-8 gap-4">
             {currentFiles.map((file) => (
-              <div className="w-full shadow-md cursor-pointer rounded-lg">
+              <div className="w-auto shadow-md cursor-pointer rounded-lg h-auto ">
                 <img 
                   src={file.image} 
-                  className="w-full rounded-lg shadow-md"
+                  className={`w-full aspect-[${file.proporcao}] object-cover rounded-lg`}
                 />
               </div>
             ))}

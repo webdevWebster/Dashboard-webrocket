@@ -5,9 +5,9 @@ import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import { Carousel, CarouselItem } from "@/components/ui/carousel";
 import { toast } from "react-hot-toast";
 import { Heart, Bookmark, Share2 } from "lucide-react"; // Ícones
-import Header from "@/components/header";
-import Footer from "@/components/footer";
-import FileGallery from "@/components/fileGallery";
+
+
+import ImageTeste from '../../assets/abril azul2.png'
 
 // 🔹 Simulação de arquivo
 const file = {
@@ -24,7 +24,7 @@ const file = {
   idNumber: "#12750179",
   format: "PSD",
   extension: "zip",
-  image: "https://img.cdndsgni.com/preview/10895863.jpg",
+  image: ImageTeste,
   creator: {
     name: "Robert",
     profilePic: "https://i.pravatar.cc/150?img=10",
