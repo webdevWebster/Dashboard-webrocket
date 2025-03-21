@@ -8,11 +8,11 @@ export function ContactPage() {
   };
 
   const handleWhatsAppClick = () => {
-    window.open("https://wa.me/5511999999999", "_blank"); // Substitua pelo seu número de WhatsApp
+    window.open("https://wa.me/5588921465375", "_blank"); // Substitua pelo seu número de WhatsApp
   };
 
   return (
-    <div className="container mx-auto p-4">
+    <div className="container mx-auto p-10">
       <h1 className="text-3xl font-bold text-center mb-8">Entre em Contato</h1>
 
       {/* Seção de Contato */}
@@ -29,7 +29,7 @@ export function ContactPage() {
             <Mail className="w-6 h-6 text-blue-500" />
             <div>
               <p className="font-semibold">E-mail</p>
-              <p className="text-gray-700">contato@sistemacriativos.com</p>
+              <p className="text-gray-700">webrocketagencia@gmail.com</p>
             </div>
             <Button variant="outline" onClick={handleEmailClick}>
               Enviar E-mail
@@ -41,7 +41,7 @@ export function ContactPage() {
             <Phone className="w-6 h-6 text-green-500" />
             <div>
               <p className="font-semibold">WhatsApp</p>
-              <p className="text-gray-700">+55 11 99999-9999</p>
+              <p className="text-gray-700">+55 88 9 2146-5375</p>
             </div>
             <Button variant="outline" onClick={handleWhatsAppClick}>
               Enviar Mensagem
