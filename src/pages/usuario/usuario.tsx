@@ -1,7 +1,7 @@
 // src/pages/Usuario.tsx
 import { useState } from "react";
 import Sidebar from "./sideBar/index";
-import Perfil from "./perfil/index";
+import { Perfil } from "./perfil"; "./perfil/index";
 import Configuracao from "./configuracao/index";
 import Assinatura from "./assinatura";
 import Faturas from "./faturas";
