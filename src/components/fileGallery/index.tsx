@@ -55,7 +55,7 @@ export default function FileGallery() {
                 <div style={{ aspectRatio: proporcao }} className="w-full">
                   <img
                     src={file.image}
-                    className="w-full h-full object-contain rounded-lg" // Usando object-contain
+                    className="w-full h-full object-contain rounded-lg " // Usando object-contain
                     alt={`Imagem ${file.id}`} // Adicione um alt para acessibilidade
                   />
                 </div>

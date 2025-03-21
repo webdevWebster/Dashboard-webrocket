@@ -12,7 +12,7 @@ import { useState } from "react";
 import ProfileDropdown from "../profileDropDown";
 
 export default function Header() {
-    const [isLoggedIn, setIsLoggedIn] = useState(true);
+    const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   return (
     <>
@@ -33,32 +33,33 @@ export default function Header() {
                 {isLoggedIn ? (
                     <ProfileDropdown />
                 ) : (
-                    <div className="flex gap-2">
-                        <Link to="/Registrar">
-                            <Button className="hidden md:block" variant="secondary">Cadastre-se</Button>
-                        </Link>
-                        <Link to="/Login">
-                            <Button className="hidden md:block">Entrar</Button>
-                        </Link>
-                    </div>
+                    <>
+                        <div className="flex gap-2">
+                            <Link to="/Registrar">
+                                <Button className="hidden md:block" variant="secondary">Cadastre-se</Button>
+                            </Link>
+                            <Link to="/Login">
+                                <Button className="hidden md:block">Entrar</Button>
+                            </Link>
+                        </div>
+                        <Sheet>
+                            <SheetTrigger asChild>
+                                <Button variant="ghost" size="icon" className="md:hidden">
+                                <Menu className="w-6 h-6" />
+                                </Button>
+                            </SheetTrigger>
+                            <SheetContent side="left" className="flex flex-col gap-4 p-6">
+                                <a href="#" className="text-lg font-semibold text-gray-700 hover:text-black">Home</a>
+                                <a href="#" className="text-lg font-semibold text-gray-700 hover:text-black">Sobre</a>
+                                <a href="#" className="text-lg font-semibold text-gray-700 hover:text-black">Contato</a>
+                                <Button className="mt-4">Entrar</Button>
+                            </SheetContent>
+                        </Sheet>
+                    </>
                 )}
 
             </div>
 
-            {/* Menu Mobile */}
-            <Sheet>
-                <SheetTrigger asChild>
-                    <Button variant="ghost" size="icon" className="md:hidden">
-                    <Menu className="w-6 h-6" />
-                    </Button>
-                </SheetTrigger>
-                <SheetContent side="left" className="flex flex-col gap-4 p-6">
-                    <a href="#" className="text-lg font-semibold text-gray-700 hover:text-black">Home</a>
-                    <a href="#" className="text-lg font-semibold text-gray-700 hover:text-black">Sobre</a>
-                    <a href="#" className="text-lg font-semibold text-gray-700 hover:text-black">Contato</a>
-                    <Button className="mt-4">Entrar</Button>
-                </SheetContent>
-            </Sheet>
         </div>
         </header>
         <Subheader />
