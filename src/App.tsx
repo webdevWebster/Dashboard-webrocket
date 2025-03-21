@@ -9,6 +9,7 @@ import { LoginForm } from './pages/login';
 import { RegisterForm } from './pages/register';
 import FilePreview from './pages/filePreview';
 import Plans from './pages/planos';
+import Usuario from './pages/usuario/usuario'
 
 export default function App() {
   return(
@@ -20,6 +21,7 @@ export default function App() {
           <Route path='/Registrar' element={<RegisterForm />} />
           <Route path='/planos' element={<Plans />} />
           <Route path='/filePreview' element={<FilePreview />} />
+          <Route path='/usuario' element={<Usuario />} />
         </Routes>
         <Plans />
       <Footer />
