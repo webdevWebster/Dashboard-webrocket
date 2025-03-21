@@ -23,7 +23,6 @@ export default function App() {
           <Route path='/filePreview' element={<FilePreview />} />
           <Route path='/usuario' element={<Usuario />} />
         </Routes>
-        <Plans />
       <Footer />
     </>
   )

@@ -4,29 +4,34 @@ import Header from "@/components/header";
 
 const plans = [
   {
-    name: "Plano Básico",
-    price: "R$29,99/mês",
+    name: "Designer Planetário",
+    price: "R$19,99/mês",
     features: [
-      "5 Download por dia",
-      "Acesso a recursos básicos",
+      "Garanta até 6 downloads diariamente",
+      "Acesso a todas as mídias premium.",
+      "Downloads simultâneos para otimização do tempo."
     ],
     isFeatured: false,
   },
   {
     name: "Plano Intermediário",
-    price: "R$49,99/mês",
+    price: "R$34,99/mês",
     features: [
-      "15 Download por dia",
-      "Suporte ao cliente",
+      "Garanta até 12 downloads diariamente",
+      "Acesso a todas as mídias premium.",
+      "Downloads simultâneos para otimização do tempo.",
+      "Experiência limpa e livre de anúncios."
     ],
     isFeatured: true,
   },
   {
     name: "Plano Avançado",
-    price: "R$99,99/mês",
+    price: "R$54,99/mês",
     features: [
-      "25 Download por dia",
-      "Consultoria personalizada",
+      "24 Download por dia",
+      "Acesso a todas as mídias premium.",
+      "Downloads simultâneos para otimização do tempo.",
+      "Experiência limpa e livre de anúncios."
     ],
     isFeatured: false, // Destaque para o plano avançado
   },

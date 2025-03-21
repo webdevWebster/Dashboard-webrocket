@@ -8,6 +8,7 @@ import { Heart, Bookmark, Share2 } from "lucide-react"; // Ícones
 
 
 import ImageTeste from '../../assets/abril azul2.png'
+import Plans from "../planos";
 
 // 🔹 Simulação de arquivo
 const file = {
@@ -162,6 +163,7 @@ export default function FilePreview() {
                 </div>
             </div>
         </div>
+        <Plans />
       </>
   );
 }
