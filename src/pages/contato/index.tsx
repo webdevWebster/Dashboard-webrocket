@@ -8,7 +8,7 @@ export function ContactPage() {
   };
 
   const handleWhatsAppClick = () => {
-    window.open("https://wa.me/5588921465375", "_blank"); // Substitua pelo seu número de WhatsApp
+    window.open("https://wa.me/5588921465375", "_blank");
   };
 
   return (
