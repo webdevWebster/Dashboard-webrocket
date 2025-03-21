@@ -20,9 +20,9 @@ import imgTeste3 from '../../assets/banner-abril-azul.png'
 const itemsPerPage = 10; // 🔹 Exibir 30 arquivos por página
 
 const files = [
-  {image: imgTeste, proporcao: '3/4' },
-  {image: imgTeste2, proporcao: '3/4'},
-  {image: imgTeste3, proporcao: '9/4'},
+  {id: 1,image: imgTeste, proporcao: '3/4' },
+  {id: 2, image: imgTeste2, proporcao: '3/4'},
+  {id: 3, image: imgTeste3, proporcao: '9/4'},
 ]
 
 export default function FileGallery() {
@@ -40,16 +40,29 @@ export default function FileGallery() {
       <section className="w-full py-10">
         <div className="container mx-auto px-4">
           {/* Grid dinâmico */}
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-8 gap-4">
-            {currentFiles.map((file) => (
-              <div className="w-auto shadow-md cursor-pointer rounded-lg h-auto ">
-                <img 
-                  src={file.image} 
-                  className={`w-full aspect-[${file.proporcao}] object-cover rounded-lg`}
-                />
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-8 gap-4">
+          {files.map((file) => {
+            const proporcao = file.proporcao; // Pega a proporção do arquivo
+
+            return (
+              <div
+                key={file.id}
+                className={`w-auto shadow-md cursor-pointer rounded-lg overflow-hidden ${
+                  file.proporcao === '9/4' ? 'col-span-3' : '' // Ajuste para o banner
+                }`}
+              >
+                {/* Contêiner com aspect-ratio */}
+                <div style={{ aspectRatio: proporcao }} className="w-full">
+                  <img
+                    src={file.image}
+                    className="w-full h-full object-contain rounded-lg" // Usando object-contain
+                    alt={`Imagem ${file.id}`} // Adicione um alt para acessibilidade
+                  />
+                </div>
               </div>
-            ))}
-          </div>
+            );
+          })}
+        </div>
 
           {/* Paginação */}
           <div className="mt-6 flex justify-center">
