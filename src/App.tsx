@@ -10,6 +10,8 @@ import { RegisterForm } from './pages/register';
 import FilePreview from './pages/filePreview';
 import Plans from './pages/planos';
 import Usuario from './pages/usuario/usuario'
+import { AboutPage } from './pages/aboutPage';
+import { ContactPage } from './pages/contato';
 
 export default function App() {
   return(
@@ -22,6 +24,8 @@ export default function App() {
           <Route path='/planos' element={<Plans />} />
           <Route path='/filePreview' element={<FilePreview />} />
           <Route path='/usuario' element={<Usuario />} />
+          <Route path="/aboutPage" element={<AboutPage />} />
+          <Route path="/ContactPage" element={<ContactPage />} />
         </Routes>
       <Footer />
     </>

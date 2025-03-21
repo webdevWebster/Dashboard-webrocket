@@ -16,13 +16,13 @@ const Footer = () => {
         <div className="mt-6 md:mt-0">
           <ul className="flex justify-center md:justify-end gap-6">
             <li>
-              <a href="#home" className="hover:text-blue-400 transition duration-300">Seja um colaborador</a>
+              <a href="/aboutPage" className="hover:text-blue-400 transition duration-300">Sobre Nós</a>
             </li>
             <li>
-              <a href="#gallery" className="hover:text-blue-400 transition duration-300">Denúncie</a>
+              <a href="/planos" className="hover:text-blue-400 transition duration-300">Planos</a>
             </li>
             <li>
-              <a href="#about" className="hover:text-blue-400 transition duration-300">Contato</a>
+              <a href="/ContactPage" className="hover:text-blue-400 transition duration-300">Contato</a>
             </li>
           </ul>
         </div>
