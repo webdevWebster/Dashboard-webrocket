@@ -2,7 +2,7 @@ import { Mail, Phone } from "lucide-react";
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-900 text-white py-12">
+    <footer className="bg-neutral-900 text-white py-12">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Seção: Sobre e Contato */}
@@ -77,48 +77,6 @@ export default function Footer() {
               <li>
                 <a href="/texturas" className="text-gray-400 hover:text-white">
                   Texturas
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          {/* Seção: Outros Tipos */}
-          <div>
-            <h4 className="text-lg font-semibold mb-4">Outros Tipos</h4>
-            <ul className="space-y-2">
-              <li>
-                <a href="/apresentacoes" className="text-gray-400 hover:text-white">
-                  Apresentações
-                </a>
-              </li>
-              <li>
-                <a href="/3d" className="text-gray-400 hover:text-white">
-                  3D
-                </a>
-              </li>
-              <li>
-                <a href="/flyers" className="text-gray-400 hover:text-white">
-                  Flyers
-                </a>
-              </li>
-              <li>
-                <a href="/banners" className="text-gray-400 hover:text-white">
-                  Banners
-                </a>
-              </li>
-              <li>
-                <a href="/backgrounds" className="text-gray-400 hover:text-white">
-                  Backgrounds
-                </a>
-              </li>
-              <li>
-                <a href="/motions" className="text-gray-400 hover:text-white">
-                  Motions
-                </a>
-              </li>
-              <li>
-                <a href="/colecoes" className="text-gray-400 hover:text-white">
-                  Coleções
                 </a>
               </li>
             </ul>

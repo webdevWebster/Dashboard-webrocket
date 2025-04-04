@@ -11,6 +11,8 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 import ProfileDropdown from "../profileDropDown";
 
+import logo from '../../assets/LOGO.png'
+
 export default function Header() {
     const [isLoggedIn, setIsLoggedIn] = useState(false);
 
@@ -20,7 +22,7 @@ export default function Header() {
         <div className="container mx-auto flex items-center justify-between p-4">
             {/* Logo */}
             <Link to='/'>
-                <div className="text-xl font-bold">MeuSite</div>
+                <img src={logo} width={120} alt="" />
             </Link>
 
             {/* Botão de Ação */}
